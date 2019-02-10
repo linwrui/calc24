@@ -1,0 +1,56 @@
+{
+  "extends": "tslint:recommended",
+  "rules": {
+    "max-line-length": [
+      false,
+      340
+    ],
+    "no-console": false,
+    "arrow-parens": [
+      "ban-single-arg-parens"
+    ],
+    "curly": false,
+    "member-access": false,
+    "member-ordering": false,
+    "variable-name": [
+      true,
+      "check-format",
+      "ban-keywords",
+      "allow-leading-underscore"
+    ],
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "no-bitwise": false,
+    "no-string-throw": false,
+    "max-classes-per-file": [
+      false
+    ],
+    "interface-name": false,
+    "await-promise": true,
+    "no-reference": false,
+    "no-var-keyword": true,
+    "no-unused-variable": true,
+    "radix": false,
+    "no-namespace": false,
+    "arrow-return-shorthand": [
+      true,
+      "multiline"
+    ],
+    "class-name": true,
+    "import-spacing": true,
+    "no-eval": false,
+    "prefer-switch": false,
+    "no-var-requires": false,
+    "prefer-template": [
+      true,
+      "allow-single-concat"
+    ],
+    "trailing-comma": [
+      false,
+      {
+        "multiline": "always",
+        "singleline": "never"
+      }
+    ]
+  }
+}
