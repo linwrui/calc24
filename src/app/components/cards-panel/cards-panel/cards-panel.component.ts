@@ -7,7 +7,7 @@ import { CardOperator } from "src/app/model/card-operator.m";
   styleUrls: ["./cards-panel.component.less"]
 })
 export class CardsPanelComponent {
-  public readonly cards: string[] = ["0", "0", "0", "0"];
+  public readonly cards: string[] = ["", "", "", ""];
   public check = 24;
   public outPut = {
     results: [],

@@ -62,7 +62,7 @@ export class CardOperator {
       for (const b of a34) {
         const ab: ExpressionOperator[] = this.Operates(a.GetResult(), b.GetResult());
         for (const h of ab) {
-          if (h < this._threshold) {
+          if (Math.abs(h.GetResult() - checkResult) < this._threshold) {
             return {
               expression: h.GetExpressionString(a.FinalExpressionString(), b.FinalExpressionString()) + `=${h.GetResult()}`,
               success: true
