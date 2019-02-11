@@ -1,8 +1,9 @@
 <div>
-  <input autofocus="true" aria [value]="cards[0]" (keyup)="cards[0]=$event.target.value">
-  <input [value]="cards[1]" (keyup)="cards[1]=$event.target.value">
-  <input [value]="cards[2]" (keyup)="cards[2]=$event.target.value">
-  <input [value]="cards[3]" (keyup)="cards[3]=$event.target.value">
+  <input autofocus="true" [value]="cards[0]" (keyup)="$event.keyCode===13?$event.target.nextElementSibling.focus():cards[0]=$event.target.value">
+  <input [value]="cards[1]" (keyup)="$event.keyCode===13?$event.target.nextElementSibling.focus():cards[1]=$event.target.value">
+  <input [value]="cards[2]" (keyup)="$event.keyCode===13?$event.target.nextElementSibling.focus():cards[2]=$event.target.value">
+  <input [value]="cards[3]" (keyup)="$event.keyCode===13?confirm():cards[3]=$event.target.value">
+  <hr />
   <button (click)="confirm()">确定</button>
 </div>
 <div>
