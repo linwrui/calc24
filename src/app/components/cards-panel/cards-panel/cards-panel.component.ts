@@ -4,7 +4,7 @@ import { CardOperator } from "src/app/model/card-operator.m";
 @Component({
   selector: "app-cards-panel",
   templateUrl: "./cards-panel.component.html",
-  styleUrls: ["./cards-panel.component.less"]
+  styleUrls: ["./cards-panel.component.less"],
 })
 export class CardsPanelComponent {
   public readonly cards: string[] = ["", "", "", ""];
@@ -15,5 +15,17 @@ export class CardsPanelComponent {
   };
   confirm() {
     this.outPut = new CardOperator(this.cards.map(x => Number.parseInt(x))).Operate(this.check);
+  }
+  handleInputKeyUp(event: KeyboardEvent, cardIndex: number) {
+    if (event.target instanceof HTMLInputElement) {
+      this.cards[cardIndex] = event.target.value;
+      if (event.keyCode === 13) {
+        if (event.target.nextElementSibling)
+          event.target.nextElementSibling.querySelector("input").focus();
+        if (cardIndex === this.cards.length - 1) {
+          this.confirm();
+        }
+      }
+    }
   }
 }
